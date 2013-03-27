@@ -1,0 +1,3 @@
+Main.controller ('TeacherController', function ($scope, $location, $routeParmas) {
+	// body...
+});
