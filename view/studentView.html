@@ -8,11 +8,13 @@
 			<li>
 				{{commnet.text}}
 				<!-- Það þarf örugglega að skoða breytuna -->
-			</li>
+			</li></br>
 		</ul>
-		<label for='comment'>Add comment</label>
-		<input type='text' id='comment' ng-model='comment.text'/>
-		</br>
-		<button class='button' ng-click='addComment()'>submit</button>
+		<div>
+		<label for='comment'>Add comment</label></br>
+		<textarea id='comment' ng-model='comment.text'></textarea>
+	</div>
+		
+		<button class='button' ng-click='addComment()'>Senda</button>
 	</li>
 </ul>
