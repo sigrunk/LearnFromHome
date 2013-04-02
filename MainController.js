@@ -1,7 +1,9 @@
 var mainConfig = function ($routeProvider) {
-	$routeProvider.when('/home', {
+	$routeProvider/*.when('/home', {
 		controller: 'LogInController', templateUrl: 'view/logIn.html'
-	}).when('/teacher', {
+	})*/.when('/home', {
+		controller: 'TeacherController', templateUrl: 'view/teacherView.html'
+	}).when('/lecture/:lectureId', {
 		controller: 'TeacherController', templateUrl: 'view/teacherView.html'
 	}).when('/student', {
 		controller: 'StudentController', templateUrl: 'view/studentView.thml'
