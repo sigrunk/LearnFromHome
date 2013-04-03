@@ -1,20 +1,21 @@
 <h2>Student view</h2>
 
-<ul ng-repeat='lecture in lectures'>
-	<li>
-		<a href='#/lecture/{{lecture.id}}'>{{lecture.name}}</a>
-		<ul ng-repeat='comment in lecture/{{lecture.id}}'>
+<ul>
+	<li class='lecture' ng-repeat='lecture in lectures'>
+		<h2>{{lecture.name}}</h2>
+		<!--<a href='#/lecture/{{lecture.id}}'>{{lecture.name}}</a>
+		<ul ng-repeat='comment in lecture/{{lecture.id}}'> -->
 			<!-- Spurning hvort það þurfi ekki að breyta þessu eitthvað. Alla vega að skoða skilyrði í repeat.-->
-			<li>
-				{{commnet.text}}
+			<!--<li>
+				{{commnet.text}} -->
 				<!-- Það þarf örugglega að skoða breytuna -->
-			</li></br>
+			<!--</li></br>
 		</ul>
 		<div>
 		<label for='comment'>Add comment</label></br>
 		<textarea id='comment' ng-model='comment.text'></textarea>
 	</div>
 		
-		<button class='button' ng-click='addComment()'>Senda</button>
+		<button class='button' ng-click='addComment()'>Senda</button>-->
 	</li>
 </ul>

@@ -1,3 +1,3 @@
-Main.controller ('LogInController', function ($scope, $location, $routeParmas) {
+Lect.controller ('LogInController', function ($scope, $location, $routeParmas) {
 	var user = UserModel.getUsers();
 });

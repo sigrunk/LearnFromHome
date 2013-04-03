@@ -1,15 +1,8 @@
 <h2>Teacher view</h2>
 
-<ul ng-repeat='lecture in lectures'>
-	<li>
-		<a href='#/lecture/{{lecture.id}}'>{{lecture.name}}
-			<ul ng-repeat='comment in lecture/{{lecture.id}}'>
-			<!-- Spurning hvort það þurfi ekki að breyta þessu eitthvað. Alla vega að skoða skilyrði í repeat.-->
-			<li>
-				{{commnet.text}}
-				<!-- Það þarf örugglega að skoða breytuna -->
-			</li>
-		</ul>
+<ul>
+	<li class='lecture' ng-repeat='lecture in lectures'>
+		<h2>{{lecture.name}}</h2>
 	</li>
 </ul>
 <button class='button' ng-click='insert()'>New lecture</button>
