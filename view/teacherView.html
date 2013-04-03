@@ -5,4 +5,7 @@
 		<h2>{{lecture.name}}</h2>
 	</li>
 </ul>
-<button class='button' ng-click='insert()'>New lecture</button>
+</br>
+<form ng-submit="addNewLecture()">
+        <input type="text" ng-model="todoText"  size="30" placeholder="Add new lecture here">
+        <input class="btn-primary" type="submit" value="New lecture">
