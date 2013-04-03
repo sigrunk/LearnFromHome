@@ -1,10 +1,13 @@
-Lect.controller ('TeacherController', function ($scope, $location, $routeParmas, LectureModel) {
-	var lectures = LectureModel.getLectures();
-	$scope.lectures = lectures;
+function TodoCtrl($scope) {
+  $scope.todos = [
+    {text:'lecture 1', done:true},
+    {text:'lecture 2', done:false}];
 
-	$scope.addLecture = function() {
-    $scope.lectures.push({text:$scope.lectureText, done:false});
-    $scope.lectureText = '';
+  $scope.addTodo = function() {
+    $scope.todos.push({text:$scope.todoText, done:false});
+    $scope.todoText = '';
   };
 
-});
+
+  
+}
