@@ -3,7 +3,7 @@
 <ul>
 	<li class='lecture' ng-repeat='lecture in lectures'>
 		<h2>{{lecture.name}}</h2>
-		<a href='#/lecture/{{lecture.id}}'>{{lecture.name}}</a>
+		<a href='{{lecture.link}}'>{{lecture.name}}</a>
 		<ul ng-repeat='comment in lecture/{{lecture.id}}'>
 			<!-- Spurning hvort það þurfi ekki að breyta þessu eitthvað. Alla vega að skoða skilyrði í repeat.-->
 			<li>
