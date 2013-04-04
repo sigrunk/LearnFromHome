@@ -1,3 +1,4 @@
-Lect.controller ('StudentController', function ($scope, $location, $routeParms) {
-	// body...
-});
+Lect.controller('StudentController', function  ($scope, $location, $routeParams, LectureModel) {
+	var lectures = LectureModel.getLectures();
+	$scope.lectures = lectures;
+})
