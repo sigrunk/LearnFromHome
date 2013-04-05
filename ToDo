@@ -1,6 +1,6 @@
 Búa til nýtt view fyrir sérhvern fyrirlestur
 Útfæra add comment - ættum að geta nýtt úr Guidebook.
-Útfæra logIn þannig að það fer á sitthvort view eftir hvort um teacher eða student er að ræða
-Athuga með að nota model fyrir user til að byrja með.
+Útfæra logIn þannig að það fer á sitthvort view eftir hvort um teacher eða student er að ræða - SIK Done
+Athuga með að nota model fyrir user til að byrja með. - SIK Done-
 Skoða delete lecture fyrir teacher
 Skoða insert lecture fyrir teacher
