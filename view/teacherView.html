@@ -3,13 +3,13 @@
 <ul>
 	<li class='lecture' ng-repeat='lecture in lectures'>
 		<h2><a href="#/lecture/{{lecture.id}}">{{lecture.name}}</a></h2>
-		<input type= "checkbox" ng-check="lecture.done" ng-model= "lecture.done" />
+		<!--input type= "checkbox" ng-check="lecture.done" ng-model= "lecture.done" />
 		<a href="{{lecture.link}}">{{lecture.name}}</a>
 		<ul ng-repeat='comment in lecture/{{lecture.id}}'>
-			<!-- Spurning hvort það þurfi ekki að breyta þessu eitthvað. Alla vega að skoða skilyrði í repeat.-->
+			
 			<li>
 				{{commnet.text}}
-				<!-- Það þarf örugglega að skoða breytuna -->
+				
 			</li></br>
 		</ul>
 		<div>
@@ -18,7 +18,7 @@
 		</div>
 		
 		<button class='button' ng-click='addComment()'>Senda</button>
-		<button class='button' ng-click='delete()'>delete</button>
+		<button class='button' ng-click='delete()'>delete</button-->
 
 	</li>
 </ul>
