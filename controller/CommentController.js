@@ -1,8 +1,8 @@
 Lect.controller('AddCommentController', function ($scope, $location, $routeParams, NoteModel) {
-  var videoId = $routeParams.videoId;
+  var lectureId = $routeParams.lectureId;
       $scope.createComment = function() {
-      NoteModel.addComment(videoId, $scope.comment.content);
-      $location.path('/video/' + videoId);
+      NoteModel.addComment(lectureId, $scope.comment.content);
+      $location.path('/lecture/' + lectureId);
     }
   }
 );
