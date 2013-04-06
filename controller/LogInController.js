@@ -15,7 +15,7 @@ Lect.controller('LogInController', function ($scope, $location, $routeParams, Us
 						console.log('er i confirm')
 					}
 					else {
-						$location.path('/teacher')
+						$location.path('/lecture')
 					};
 				}
 				else{

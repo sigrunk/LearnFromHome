@@ -1,0 +1,21 @@
+<ul>
+  <li ng-repeat='lecture in lectures | orderBy:"title"'>
+    <h2>{{lecture.title}}</h2>
+    <p>{{lecture.summary}}</p>
+    <p>
+      <a href='#/lecture/{{lecture.id}}'>
+        {{lecture.comments.length}}
+        <ng-pluralize count='lecture.comments.length'
+          when='{"1": "comment", "other": "comments"}'>
+        </ng-pluralize>
+      </a>
+      |
+      <a href='#/addComment/{{lecture.id}}'>add comment</a>
+    </p>
+<div gb-comment-list comments='lecture.comments'
+  orderBy='id'
+  show='lecture.id == selectedChapterId'
+  deleteNoteHandler='onDelete'>
+</div>
+  </li>
+</ul>

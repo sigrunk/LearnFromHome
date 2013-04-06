@@ -1,0 +1,7 @@
+<ul class='comment' ng-show='show'>
+  <li ng-repeat='comment in comments | orderBy:orderValue'>
+    <div>#{{$index}}</div>
+    <div><a href ng-click='onDelete(comment.id)'>delete</a></div>
+    <p>{{comment.content}}</p>
+  </li>
+<ul>

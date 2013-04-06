@@ -1,0 +1,29 @@
+<h2>Teacher view</h2>
+
+<ul>
+<li class='lecture' ng-repeat='lecture in lectures'>
+  <a href="#/lecture/{{lecture.link}}"><h2>{{lecture.name}}</h2></a>
+  <p>{{lecture.summary}}</p>
+  <p>
+      <a href='#/lecture/{{lecture.id}}'>
+        {{lecture.comments.length}}
+        <span ng-show='lecture.comments.length == 1'>comment</span>
+        <span ng-show='lecture.comments.length != 1'>comments</span>
+      </a>
+      |
+      <a href='#/addComment/{{lecture.id}}'>add comment</a>
+    </p>
+
+    <ul class='comments' ng-show='lecture.id == selectedLectureId'>
+
+      <li ng-repeat='comment in lecture.comments | orderBy:"id"'>
+        <div>#{{$index}}</div>
+        <div><a ng-click='onDelete(comment.id)'>delete</a></div>
+        <p>{{comment.content}}</p>
+      </li>
+    </ul>
+      
+  </li>
+</ul>
+
+<button class='button' ng-click='insert()'>Add lecture</button>

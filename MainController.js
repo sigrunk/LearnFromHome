@@ -1,15 +1,18 @@
 var lectConfig = function ($routeProvider) {
 	$routeProvider.when('/home', {
 		controller: 'LogInController', templateUrl: 'view/logIn.html'
-	}).when('/teacher', {
-		controller: 'TeacherController', templateUrl: 'view/teacherView.html'
+	}).when('/lecture', {
+		controller: 'LectureController', templateUrl: 'view/lecture.html'
 	
 	}).when('/lecture/:Id', {
-		controller: 'LectureController', templateUrl: 'view/lectureView.html'
+		controller: 'LectureController', templateUrl: 'view/lecture.html'
 	
-	}).when('/createComment/:lectureId', {
-      controller: 'AddCommentController', templateUrl: 'view/createComment.html'
+	}).when('/addComment/:lectureId', {
+      controller: 'AddCommentController', templateUrl: 'view/addComment.html'
     
+    }).when('/deleteComment/:lectureId/:commentId', {
+      controller: 'DeleteCommentController', templateUrl: 'view/addComment.html'
+   
 	}).when('/student', {
 		controller: 'StudentController', templateUrl: 'view/studentView.html'
 	}).otherwise( {redirectTo: '/home'});
