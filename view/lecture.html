@@ -18,8 +18,10 @@
 
       <li ng-repeat='comment in lecture.comments | orderBy:"id"'>
         <div>#{{$index}}</div>
-        <div><a ng-click='onDelete(comment.id)'>delete</a></div>
         <p>{{comment.content}}</p>
+
+        <div><a  ng-click='onDelete(comment.id)'href>delete</a></div>
+        
       </li>
     </ul>
       

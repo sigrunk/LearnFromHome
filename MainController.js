@@ -4,7 +4,7 @@ var lectConfig = function ($routeProvider) {
 	}).when('/lecture', {
 		controller: 'LectureController', templateUrl: 'view/lecture.html'
 	
-	}).when('/lecture/:Id', {
+	}).when('/lecture/:lectureId', {
 		controller: 'LectureController', templateUrl: 'view/lecture.html'
 	
 	}).when('/addComment/:lectureId', {

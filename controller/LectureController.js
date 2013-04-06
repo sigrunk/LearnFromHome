@@ -7,8 +7,8 @@ $scope.lectures = lectures;
 $scope.selectedLectureId = $routeParams.lectureId;
 
 $scope.onDelete = function (commentId) {
-var confirmDelete = confrim('Are you sure you want to delete this comment?');
-if (confrim) {
+var confirmDelete = confirm('Are you sure you want to delete this comment?');
+if (confirm) {
 $location.path('/deleteComment/' + $routeParams.lectureId + '/' + commentId);
 }
 };
