@@ -2,7 +2,7 @@
 
 <ul>
 <li class='lecture' ng-repeat='lecture in lectures'>
-  <a href="#/lecture/{{lecture.link}}"><h2>{{lecture.name}}</h2></a>
+  <a href="{{lecture.link}}"><h2>{{lecture.name}}</h2></a>
   <p>{{lecture.summary}}</p>
   <p>
       <a href='#/lecture/{{lecture.id}}'>
@@ -28,4 +28,4 @@
   </li>
 </ul>
 
-<button class='button' ng-click='insert()'>Add lecture</button>
+<button class='button' ng-show='user.role == "teacher"' ng-click='insert()'>Add lecture</button>
