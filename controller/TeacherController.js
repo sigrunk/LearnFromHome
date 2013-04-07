@@ -15,3 +15,25 @@ Lect.controller('TeacherController', function  ($scope, $location, $routeParams,
 		}
 	};
 });
+
+Lect.controller('AddLectureController',
+  function ($scope, $location, $routeParams, LectureModel) {
+    //var lectureId = $routeParams.lectureId;
+    $scope.cancel = function() {
+      $location.path('/teacher');
+    }
+    $scope.createLecture = function() {
+      LectureModel.addLecture($scope.lecture.name, $scope.lecture.summary, $scope.lecture.link);
+      $location.path('/teacher');
+    }
+  }
+);
+
+Lect.controller('DeleteLectureController',
+  function ($scope, $location, $routeParams, LectureModel) {
+    var lectureId = $routeParams.lectureId;
+    CommentModel.deleteComment(lectureId, $routeParams.commentId);
+    $scope.selectedLectureId = lectureId;
+    $location.path('/lecture/' + lectureId);
+  }
+);

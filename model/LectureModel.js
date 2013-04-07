@@ -12,4 +12,24 @@ Lect.service('LectureModel', function() {
 			summary: 'This is a lecture about almoust nothing interesing t...'
 		}]
 	}
+
+	this.addLecture = function(lecture_name, lecture_date, abstract, youtube) {
+      var now = new Date();
+      var lecture = {
+        name: lecture_name,
+        //date: lecture_date,
+        summary: abstract,
+        link: youtube,
+        id: now
+      };
+      //var lecture = JSON.parse(window.localStorage.getItem());
+      /*if (!lecture) {
+        lecture = {
+          id: lectureId,
+          lecture: []
+        }
+      }*/
+      lecture.push(lecture);
+      window.localStorage.setItem(JSON.stringify(lecture));
+    };
 })

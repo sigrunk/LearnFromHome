@@ -15,4 +15,3 @@ Lect.controller('LectureController', function  ($scope, $location, $routeParams,
 });
 
 
-
