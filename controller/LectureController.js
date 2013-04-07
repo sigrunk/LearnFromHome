@@ -5,6 +5,7 @@ Lect.controller('LectureController', function  ($scope, $location, $routeParams,
 	}
 	$scope.lectures = lectures;
 	$scope.selectedLectureId = $routeParams.lectureId;
+	$scope.isStudent = true;
 
 	$scope.onDelete = function (commentId) {
 	var confirmDelete = confirm('Are you sure you want to delete this comment?');

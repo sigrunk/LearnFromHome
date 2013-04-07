@@ -6,6 +6,10 @@ Lect.controller('AddCommentController',
     }
     $scope.createComment = function() {
       CommentModel.addComment(lectureId, $scope.comment.content);
+      if($routeParams.isTeacher == true){
+        $location.path('/teacher/' + lectureId);
+        // finna út hvernig við getum nálgast is teacher úr teacher controller
+      }
       $location.path('/lecture/' + lectureId);
     }
   }

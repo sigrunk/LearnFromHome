@@ -17,19 +17,27 @@ Lect.service('LectureModel', function() {
       var now = new Date();
       var lecture = {
         name: lecture_name,
-        //date: lecture_date,
+        date: lecture_date,
         summary: abstract,
         link: youtube,
         id: now
       };
-      //var lecture = JSON.parse(window.localStorage.getItem());
-      /*if (!lecture) {
-        lecture = {
-          id: lectureId,
-          lecture: []
+
+      console.log(lecture.name + lecture.date, lecture.summary, lecture.link);
+      // skila sér til baka úr view. Þarf að útfæra þannig að þetta fari í grunninn.
+    };
+    this.deleteLecture = function(lectureId) {
+      /*var lecture = JSON.parse(window.localStorage.getItem(lectureId));
+      if (!lecture || !lecture.comments) {
+        return;
+      }
+      for (var i=0; i<lecture.comments.length; i++) {
+        if (lecture.comments[i].id === commentId) {
+          lecture.comments.splice(i, 1);
+          window.localStorage.setItem(lectureId, JSON.stringify(lecture));
+          return;
         }
       }*/
-      lecture.push(lecture);
-      window.localStorage.setItem(JSON.stringify(lecture));
+      console.log('erum í delete lecture')
     };
 })

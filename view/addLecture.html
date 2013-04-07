@@ -1,14 +1,14 @@
 <form name="addLecture"> <!--action="http://skeleton.local/lectures/lecture/5" method="put">-->
 	<label for="lecture_name">Nafn fyrirlestrar</label>
-	<input type="text" id="lecture_name" ng-model='name' />
+	<input type="text" name="lecture_name" ng-model='lecture.name' />
 	<label for="lecture_date">Dagsetning</label>
-	<input type="date" id="lecture_date" ng-model='date'>
+	<input type="date" name="lecture_date" ng-model='lecture.date'>
 	<label for="abstract">Úrdráttur</label>
-	<textarea id="abstract" ng-model='summary'></textarea>
+	<textarea name="abstract" ng-model='lecture.summary'></textarea>
 	<label for="youtube">YouTube hlekkur</label>
-	<input type="text" id="youtube" ng-model='link' />
+	<input type="text" name="youtube" ng-model='lecture.link' />
 	<!--<input type="submit" value="Skrá fyrirlestur" /> -->
 
 	<button ng-click='cancel()'>Cancel</button>
-  	<button ng-click='createLecture()' >Create Comment</button>
+  	<button ng-click='createLecture()' ng-disabled='!lecture.link'>Create Comment</button>
 </form>

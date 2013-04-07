@@ -10,12 +10,12 @@ Lect.controller('LogInController', function ($scope, $location, $routeParams, Us
 
 				//$location.path('/student')
 				if (users[i].password === $scope.user.password) {
-					if (users[i].role === 'student') {
-						$location.path('/lecture')
+					if (users[i].role === 'teacher') {
+						$location.path('/teacher')
 						console.log('er i confirm')
 					}
 					else {
-						$location.path('/teacher')
+						$location.path('/lecture')
 					};
 				}
 				else{

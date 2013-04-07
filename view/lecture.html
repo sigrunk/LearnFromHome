@@ -1,8 +1,10 @@
-<h2>Teacher view</h2>
+<h2 ng-show='isTeacher'>Teacher view</h2>
+<h2 ng-show='isStudent'>Student view</h2>
 
 <ul>
 <li class='lecture' ng-repeat='lecture in lectures'>
   <a href="{{lecture.link}}"><h2>{{lecture.name}}</h2></a>
+  <div><a  ng-show='isTeacher' ng-click='deleteLect(lecture.id)'href>delete</a></div>
   <p>{{lecture.summary}}</p>
   <p>
       <a href='#/lecture/{{lecture.id}}'>
@@ -29,4 +31,3 @@
 </ul>
 
 <button class='button' ng-show='isTeacher' ng-click='insert()'>Add lecture</button>
-<button class='button' ng-show='isTeacher' ng-click='deleteLect()'>Delete lecture</button>
