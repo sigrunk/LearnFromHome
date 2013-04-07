@@ -14,8 +14,8 @@ var lectConfig = function ($routeProvider) {
     }).when('/deleteComment/:lectureId/:commentId', {
       controller: 'DeleteCommentController', templateUrl: 'view/addComment.html'
    
-	}).when('/student', {
-		controller: 'StudentController', templateUrl: 'view/studentView.html'
+	}).when('/teacher', {
+		controller: 'TeacherController', templateUrl: 'view/lecture.html'
 	}).otherwise( {redirectTo: '/home'});
 };
 
