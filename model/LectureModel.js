@@ -31,20 +31,16 @@ Lect.service('LectureModel', function ($http) {
       };
 
       console.log(lecture.name + lecture.date, lecture.summary, lecture.link);
-      // skila sér til baka úr view. Þarf að útfæra þannig að þetta fari í grunninn.
+      /* skila sér til baka úr view. Þarf að útfæra þannig að þetta fari í grunninn. '
+        Tókum ákvörðun um að útfæra þetta ekki í local storage líkt og comment þar
+        sem við sáum að þetta var að skila sér (með console.log) úr forminu inn í modelið
+      */
+
+
     };
     this.deleteLecture = function(lectureId) {
-      /*var lecture = JSON.parse(window.localStorage.getItem(lectureId));
-      if (!lecture || !lecture.comments) {
-        return;
-      }
-      for (var i=0; i<lecture.comments.length; i++) {
-        if (lecture.comments[i].id === commentId) {
-          lecture.comments.splice(i, 1);
-          window.localStorage.setItem(lectureId, JSON.stringify(lecture));
-          return;
-        }
-      }*/
       console.log('erum í delete lecture')
+      /* Ekki útfært því við vorum ekki búin að útfæra addLecture.
+         þetta átti að virka með REST þjónustunni. */
     };
 })
