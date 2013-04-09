@@ -17,77 +17,97 @@ body{
 	h1{
 		color: white;
 	}
+
+	.wrapper{
+		max-width: 800px;
+	}
 }
 
-section.chatboard{
-	border: 2px solid black;
-	padding: 5px;
-	width: 820px;
-	height: 500px;
-	background-color: @background-light-green;
+.youtube-wrapper{
+	width: 100%;
+	background-color: white;
+	border: 3px solid black;
 
-	h1{
-		color: black;
-	}
-
-	.chatboard-wrapper{
+	p{
 		margin: 10px;
-		float: left;
+	}
+	
+	margin-bottom: 20px;
+}
 
-		.chat-messages{
-			font-size: 18/16em;
-			width: 590px;
-			height: 400px;
-			background-color: white;
-			border: 1px solid black;
-			margin-bottom: 3px;
+p.summary{
+	color: white;
+	margin-bottom: 20px;
+}
 
+a.delete{
+	margin: 5px;
+	background-color: red;
+	width: 60px;
+	border: 1px solid black;
+}
 
-			li{
-				padding: 0 0 3px 5px;
-			}
-		}
+.another-button{
+	display: block;
+	padding: 5px;
+	font-weight: bold;
+	text-align: center
+}
 
-		.chat-input{
-			width: 586px;
-			border: 1px solid black;
-			padding: 2px;
+a.add{
+	width: 120px;
+	display: inline;
+	background-color: lime;
+	border: 1px solid black;
+}
 
-			input{
-				width: 465px;
-				margin-left: 5px;
-				margin-right: 20px;
-			}
-		}
+p{
+	margin-bottom: 10px;
+}
+
+li.lecture{
+	float: left;
+	margin-right: 40px;
+	margin-bottom: 20px;
+}
+
+li.lecture:after{
+	.clearfix;
+}
+
+li.comments{
+	border: 2px solid black;
+	margin-bottom: 10px;
+	background-color: grey;
+	padding: 10px;
+}
+
+ul{
+	margin-bottom: 40px;
+}
+
+textarea{
+	width: 100%;
+	min-height: 200px;
+}
+
+dl{
+	max-width: 400px;
+	padding: 10px;
+	background-color: lime;
+	
+	button{
+		margin-top: 20px;
 	}
 
-	aside{
-		font-size: 18/16em;
-		width: 200px;
-		float: left;
-		margin-top: 10px;
-		background-color: @background-userlist-color;
-		border: 1px solid black;
-		ul{
-			li{
-				padding-left: 5px;
-				padding-top: 2px;
-				padding-bottom: 2px;
-			}
-		}
+	input{
+		width: 100%;
 	}
+}
 
-	.admin{
-		background-color: @admin-color;
-	}
-
-	.admin:before{
-		content: '@ ';
-	}
-
-	.me{
-		background-color: orange;
-	}
+button{
+	margin-top: 20px;
+	padding: 6px;
 }
 
 section.chatboards{
@@ -112,7 +132,7 @@ section.chatboards{
 /**
  * GLOBAL STYLES
  */
-h1{
+h1, h2{
 	margin-bottom: 10px;
 }
 

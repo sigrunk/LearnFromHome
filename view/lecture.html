@@ -2,27 +2,30 @@
 <h2 ng-show='isStudent'>Student view</h2>
 
 <ul>
-<li class='lecture' ng-repeat='lecture in lectures'>
-  <a href="{{lecture.link}}"><h2>{{lecture.name}}</h2></a>
-  <div><a  ng-show='isTeacher' ng-click='deleteLect(lecture.id)'href>delete</a></div>
-  <p>{{lecture.summary}}</p>
+  <li class='lecture' ng-repeat='lecture in lectures'>
+    <h2><a href="http://www.youtube.com/watch?{{lecture.link}}">{{lecture.name}}</a></h2>
+    <div class="youtube-wrapper">
+      <p>Hér ætti undir öllum venjulegum kringumstæðum að koma YouTube myndband, en vegna cross-site vandræða koma þau ekki</p>
+      <p>Þess vegna biðjum við þig um að smella á titilinn á fyrirlestrinum til að horfa á fyrirlesturinn, á meðan við vinnum út úr vandanum</p>
+    </div>
+  <div><a class="delete another-button" ng-show='isTeacher' ng-click='deleteLect(lecture.id)'>delete</a></div>
+  <p class="summary">{{lecture.summary}}</p>
   <p>
       <a href='#/lecture/{{lecture.id}}'>
         {{lecture.comments.length}}
-        <span ng-show='lecture.comments.length == 1'>comment</span>
-        <span ng-show='lecture.comments.length != 1'>comments</span>
+        <span ng-show='lecture.comments.length == 1'>athugasemd</span>
+        <span ng-show='lecture.comments.length != 1'>athugasemdir</span>
       </a>
       |
-      <a href='#/addComment/{{lecture.id}}'>add comment</a>
+      <a class="add another-button" href='#/addComment/{{lecture.id}}'>Bæta við athugasemd</a>
     </p>
 
     <ul class='comments' ng-show='lecture.id == selectedLectureId'>
 
-      <li ng-repeat='comment in lecture.comments | orderBy:"id"'>
-        <div>#{{$index}}</div>
+      <li class="comments" ng-repeat='comment in lecture.comments | orderBy:"id"'>
         <p>{{comment.content}}</p>
 
-        <div><a  ng-click='onDelete(comment.id)'href>delete</a></div>
+        <a class="another-button delete" ng-click='onDelete(comment.id)'>Eyða</a>
         
       </li>
     </ul>

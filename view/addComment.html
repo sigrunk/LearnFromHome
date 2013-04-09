@@ -1,6 +1,8 @@
 <form name='addComment'>
-  <label for='commentContent'>Enter a comment about this lecture:</label></br>
-  <textarea rows="4" cols="50" id='commentContent' ng-model='comment.content'></textarea></br>
-  <button ng-click='cancel()'>Cancel</button>
-  <button ng-click='createComment()' ng-disabled='!comment.content'>Create Comment</button>
+	<dl>
+		<dt><label for='commentContent'>Enter a comment about this lecture:</label></dt>
+  		<dd><textarea rows="4" cols="50" id='commentContent' ng-model='comment.content'></textarea><dd>
+  	</dl>
+	<button class="button" ng-click='cancel()'>Cancel</button>
+	<button class="button" ng-click='createComment()' ng-disabled='!comment.content'>Create Comment</button>
 </form>
