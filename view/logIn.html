@@ -1,7 +1,9 @@
 <form name='logIn'>
-	<label for='userName'>Username</label>
-	<input type='text' id='userName' ng-model='user.name'/></br>
-	<label for='passWord'>Password</label>
-	<input type='text' id='passWord' ng-model='user.password'/></br>
-	<button ng-click='confirm()'>LogIn</button>
+	<dl>
+		<dt><label for='userName'>Username</label></dt>
+		<dd><input type='text' id='userName' ng-model='user.name'/></dd>
+		<dt><label for='passWord'>Password</label></dt>
+		<dd><input type='password' id='passWord' ng-model='user.password'/></dd>
+		<button ng-click='confirm()'>LogIn</button>
+	</dl>
 </form>
