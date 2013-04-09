@@ -1,4 +1,4 @@
-Lect.controller('TeacherController', function  ($scope, $location, $routeParams, LectureModel, CommentModel) {
+Lect.controller('TeacherController', function  ($scope, $location, $routeParams, $http, LectureModel, CommentModel) {
 	var lectures = LectureModel.getLectures();
 	for (var i = 0; i < lectures.length; i++) {
 		lectures[i].comments = CommentModel.getCommentsForLecture(lectures[i].id);
@@ -28,7 +28,7 @@ Lect.controller('TeacherController', function  ($scope, $location, $routeParams,
 });
 
 Lect.controller('AddLectureController',
-  function ($scope, $location, $routeParams,$http, LectureModel) {
+  function ($scope, $location, $routeParams, $http, LectureModel) {
     $scope.cancel = function() {
       $location.path('/teacher');
     }

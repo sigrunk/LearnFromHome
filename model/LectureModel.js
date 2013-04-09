@@ -1,6 +1,6 @@
-Lect.service('LectureModel', function($http) {
-	this.getLectures = function() {
-		/*return[{
+Lect.service('LectureModel', function ($http) {
+ 	this.getLectures = function() {
+		return[{
 			id: 1,
 			name: 'Fyrsti fyrirlestur',
 			link: 'http://www.youtube.com/watch?v=gdAiRnR1G78&feature=plcp',
@@ -10,11 +10,13 @@ Lect.service('LectureModel', function($http) {
 			name: 'Annar fyrirlestur',
 			link: 'http://www.youtube.com/watch?v=F-Ds4g3vk5w',
 			summary: 'This is a lecture about almoust nothing interesing t...'
-		}]*/
+		}]
+    /*
+    Þetta er tilraun okkar við að tengjast REST þjónustunni. Lentum í cross side server villu
     $http.get('http://lectureapi.isproject.is/lectures/lecture').success(function(data) {
       //$scope.courses = data;
       console.log(data);
-    });
+    });*/
 	}
 
 
