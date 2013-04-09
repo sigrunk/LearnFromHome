@@ -28,7 +28,7 @@ Lect.controller('TeacherController', function  ($scope, $location, $routeParams,
 });
 
 Lect.controller('AddLectureController',
-  function ($scope, $location, $routeParams, LectureModel) {
+  function ($scope, $location, $routeParams,$http, LectureModel) {
     $scope.cancel = function() {
       $location.path('/teacher');
     }

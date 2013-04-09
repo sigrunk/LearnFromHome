@@ -1,6 +1,6 @@
-Lect.service('LectureModel', function() {
+Lect.service('LectureModel', function($http) {
 	this.getLectures = function() {
-		return[{
+		/*return[{
 			id: 1,
 			name: 'Fyrsti fyrirlestur',
 			link: 'http://www.youtube.com/watch?v=gdAiRnR1G78&feature=plcp',
@@ -10,8 +10,13 @@ Lect.service('LectureModel', function() {
 			name: 'Annar fyrirlestur',
 			link: 'http://www.youtube.com/watch?v=F-Ds4g3vk5w',
 			summary: 'This is a lecture about almoust nothing interesing t...'
-		}]
+		}]*/
+    $http.get('http://lectureapi.isproject.is/lectures/lecture').success(function(data) {
+      //$scope.courses = data;
+      console.log(data);
+    });
 	}
+
 
 	this.addLecture = function(lecture_name, lecture_date, abstract, youtube) {
       var now = new Date();
